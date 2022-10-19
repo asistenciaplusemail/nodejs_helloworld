@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: asistenciaplusemailnodejshelloworld 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: asistenciaplusemailnodejshelloworld
+  template:
+    metadata:
+      labels:
+        app: asistenciaplusemailnodejshelloworld 
+    spec:
+      containers:
+        - name: asistenciaplusemailnodejshelloworld 
+          image: registrodecotenedores.azurecr.io/asistenciaplusemailnodejshelloworld
+          ports:
+          - containerPort: 8080
